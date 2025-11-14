@@ -82,10 +82,10 @@
       padding: 32px 16px 40px;
     }
 
-.section {
-  max-width: var(--tgms-max-width);
-  margin: 0 auto 40px;
-  scroll-margin-top: 90px;   /* ← ヘッダー高さぶんの余白 */
+    .section {
+      max-width: var(--tgms-max-width);
+      margin: 0 auto 40px;
+      scroll-margin-top: 90px;
     }
 
     .section:last-of-type {
@@ -178,13 +178,12 @@
       border: 1px solid #dde3ee;
     }
 
-.hero-sidebox h3 {
-  font-size: 1.25rem;     /* ← これで明確に大きくなる */
-  margin-bottom: 8px;
-  color: var(--tgms-blue);
-  font-weight: 600;
-}
-
+    .hero-sidebox h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: var(--tgms-blue);
+      font-weight: 600;
+    }
 
     .hero-sidebox ul {
       padding-left: 16px;
@@ -269,9 +268,10 @@
     /* CONTACT */
     .contact-wrapper {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
       gap: 28px;
       align-items: flex-start;
+      margin-top: 16px;
     }
 
     .contact-box {
@@ -287,10 +287,31 @@
       color: var(--tgms-muted);
     }
 
+    .contact-title {
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
     .contact-email {
       font-weight: 600;
       color: var(--tgms-blue);
       font-size: 0.95rem;
+    }
+
+    .contact-email a {
+      font-weight: 600;
+      color: var(--tgms-accent);
+      text-decoration: none;
+    }
+
+    .contact-email a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-description {
+      margin-top: 10px;
+      line-height: 1.6;
+      color: var(--tgms-muted);
     }
 
     form {
@@ -406,11 +427,10 @@
       <aside class="hero-sidebox">
         <h3>Focus Areas</h3>
         <ul>
-<li>ASEAN/Japan Market Entry Feasibility</li>
-<li>Indonesia Multi-Year Database (Wholesale / Production / Export)</li>
-<li>Price-Band & Footprint Benchmarking (ICE / BEV / K-EV)</li>
-<li>Cross-OEM Competitive Intelligence</li>
-
+          <li>ASEAN/Japan Market Entry Feasibility</li>
+          <li>Indonesia Multi-Year Database (Wholesale / Production / Export)</li>
+          <li>Price-Band &amp; Footprint Benchmarking (ICE / BEV / K-EV)</li>
+          <li>Cross-OEM Competitive Intelligence</li>
         </ul>
       </aside>
     </section>
@@ -493,7 +513,6 @@
           <div class="insights-label">Indonesia</div>
           <strong>Indonesia Landscape View</strong><br />
           <span>Structural view of OEM positioning, segments, and price bands in Indonesia, based on GAIKINDO-aligned wholesale and production data.</span>
-          <!-- TODO: Add link to PDF or LinkedIn Featured item -->
         </li>
         <li>
           <div class="insights-label">Japan</div>
@@ -521,22 +540,21 @@
       </p>
 
       <div class="contact-wrapper">
+        <!-- 左：Direct email -->
         <div class="contact-box">
-          <p>Direct email:</p>
+          <p class="contact-title">Direct email:</p>
           <p class="contact-email">
-            <a href="mailto:info@tgmsstrategy.com">info@tgmsstrategy.com</a>
+            <a href="mailto:naoki@tgmsstrategy.com">naoki@tgmsstrategy.com</a>
           </p>
-          <p>
-            Typical engagements include market-entry / localization studies, Indonesia insight packs, and executive briefing decks.
+          <p class="contact-description">
+            Typical engagements include market-entry / localization studies,
+            Indonesia insight packs, and executive briefing decks.
           </p>
         </div>
 
+        <!-- 右：フォーム -->
         <form method="post" action="">
-          <!--
-            NOTE:
-            - Leave action="" for now, or connect to your form handler service (e.g. form backend, server, or no-code form tool).
-            - Example later: action="https://your-form-endpoint"
-          -->
+          <!-- 後で Formspree 等のエンドポイントをここに設定 -->
           <div>
             <label for="name">Name<span class="required">*</span></label>
             <input type="text" id="name" name="name" required />
@@ -581,3 +599,4 @@
   </footer>
 </body>
 </html>
+
