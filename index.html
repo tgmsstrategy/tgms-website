@@ -601,11 +601,16 @@
         </div>
 
         <!-- 右：フォーム -->
-        <form method="post"
-      action="https://formspree.io/f/xpwkqood"
-      accept-charset="UTF-8"
-      >
-  <input type="hidden" name="_redirect" value="https://tgmsstrategy.com/success.html">
+        <form
+  method="POST"
+  action="https://formspree.io/f/xpwkqood"
+  accept-charset="UTF-8"
+>
+  <!-- 送信後に success.html へリダイレクト -->
+  <input type="hidden" name="_redirect" value="https://tgmsstrategy.com/success.html" />
+
+  <!-- スパム対策用 ダミーフィールド（人間には見えない）-->
+  <input type="text" name="_gotcha" style="display:none" />
 
   <div>
     <label for="name">Name<span class="required">*</span></label>
@@ -626,7 +631,7 @@
     <label for="type">Inquiry Type<span class="required">*</span></label>
     <select id="type" name="type" required>
       <option value="">Please select</option>
-      <option value="market-entry">Market Entry & Localization</option>
+      <option value="market-entry">Market Entry &amp; Localization</option>
       <option value="indonesia-pack">Indonesia Insight Pack</option>
       <option value="advisory">Advisory / Consulting</option>
       <option value="other">Other</option>
@@ -643,6 +648,7 @@
   </div>
 </form>
 
+
       </div>
     </section>
   </main>
@@ -652,6 +658,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
