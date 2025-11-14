@@ -1,375 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomura Global Mobility Strategy (TGMS)</title>
-  <meta name="description" content="Tomura Global Mobility Strategy (TGMS) – Automotive market entry & localization advisory specializing in ASEAN and Japan.">
-  <style>
-    :root {
-      --tgms-blue: #003366;
-      --tgms-light: #f5f7fa;
-      --tgms-accent: #0066cc;
-      --tgms-text: #222222;
-      --tgms-muted: #666666;
-      --tgms-max-width: 960px;
-    }
+<style>
+  :root {
+    --tgms-blue: #003366;
+    --tgms-light: #f5f7fa;
+    --tgms-accent: #0066cc;
+    --tgms-text: #222222;
+    --tgms-muted: #666666;
+    --tgms-max-width: 960px;
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--tgms-text);
-      background-color: #ffffff;
-      line-height: 1.6;
-    }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--tgms-text);
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
 
-    a {
-      color: var(--tgms-accent);
-      text-decoration: none;
-    }
+  a {
+    color: var(--tgms-accent);
+    text-decoration: none;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    header {
-      background: linear-gradient(135deg, var(--tgms-blue), #001a33);
-      color: white;
-      padding: 16px 24px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+  header {
+    background: linear-gradient(135deg, var(--tgms-blue), #001a33);
+    color: white;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .nav-inner {
+    max-width: var(--tgms-max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .logo {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+  }
+
+  nav a {
+    color: #e7edf7;
+    opacity: 0.9;
+  }
+
+  nav a:hover {
+    opacity: 1;
+  }
+
+  main {
+    padding: 32px 16px 40px;
+  }
+
+  .section {
+    max-width: var(--tgms-max-width);
+    margin: 0 auto 40px;
+    scroll-margin-top: 90px;
+  }
+
+  /* HERO */
+  .hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 32px;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #dde3ee;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 700;
+    color: var(--tgms-blue);
+    margin-bottom: 8px;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--tgms-muted);
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    color: var(--tgms-text);
+    margin-bottom: 20px;
+  }
+
+  .hero-highlight {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #c5d2e5;
+    font-size: 0.8rem;
+    color: var(--tgms-muted);
+    margin-bottom: 12px;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn-primary {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--tgms-accent);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #0052a3;
+  }
+
+  .btn-outline {
+    border-radius: 999px;
+    padding: 9px 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--tgms-accent);
+    border: 1px solid #c5d2e5;
+  }
+
+  .btn-outline:hover {
+    background-color: #eef3fb;
+  }
+
+  .hero-sidebox {
+    background-color: var(--tgms-light);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 0.85rem;
+    color: var(--tgms-muted);
+    border: 1px solid #dde3ee;
+  }
+
+  /* Insights PDF button */
+  .insight-actions .btn-outline {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    margin-top: 6px;
+  }
+
+  .insight-actions {
+    margin-top: 4px;
+  }
+
+  /* CONTACT */
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+    gap: 28px;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+
+  .contact-box {
+    background-color: var(--tgms-light);
+    border-radius: 12px;
+    padding: 16px 18px;
+    border: 1px solid #dde3ee;
+  }
+
+  form {
+    display: grid;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #c5d2e5;
+  }
+
+  /* --- MOBILE FIX (スマホ版崩れ修正) --- */
+  @media (max-width: 768px) {
 
     .nav-inner {
-      max-width: var(--tgms-max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-
-    .logo {
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      font-size: 0.95rem;
-      text-transform: uppercase;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
     }
 
     nav ul {
-      list-style: none;
-      display: flex;
-      gap: 18px;
-      font-size: 0.9rem;
+      flex-wrap: wrap;
     }
 
-    nav a {
-      color: #e7edf7;
-      opacity: 0.9;
+    .hero {
+      grid-template-columns: 1fr;
     }
 
-    nav a:hover {
-      opacity: 1;
-    }
-
-    main {
-      padding: 32px 16px 40px;
+    .contact-wrapper {
+      grid-template-columns: 1fr;
     }
 
     .section {
-      max-width: var(--tgms-max-width);
-      margin: 0 auto 40px;
-      scroll-margin-top: 90px;
+      scroll-margin-top: 70px;
     }
+  }
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 32px;
-      align-items: center;
-      padding-top: 16px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #dde3ee;
-    }
+  footer {
+    border-top: 1px solid #dde3ee;
+    padding: 16px;
+    font-size: 0.8rem;
+    color: var(--tgms-muted);
+    text-align: center;
+    background-color: #fafbfe;
+    margin-top: 8px;
+  }
+</style>
 
-    .hero-title {
-      font-size: clamp(2rem, 3vw, 2.6rem);
-      font-weight: 700;
-      color: var(--tgms-blue);
-      margin-bottom: 8px;
-    }
 
-    .hero-tagline {
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--tgms-muted);
-      margin-bottom: 16px;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--tgms-text);
-      margin-bottom: 20px;
-    }
-
-    .hero-highlight {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid #c5d2e5;
-      font-size: 0.8rem;
-      color: var(--tgms-muted);
-      margin-bottom: 12px;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn-primary {
-      border: none;
-      border-radius: 999px;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      background-color: var(--tgms-accent);
-      color: white;
-    }
-
-    .btn-primary:hover {
-      background-color: #0052a3;
-    }
-
-    .btn-outline {
-      border-radius: 999px;
-      padding: 9px 18px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      cursor: pointer;
-      background-color: transparent;
-      color: var(--tgms-accent);
-      border: 1px solid #c5d2e5;
-    }
-
-    .btn-outline:hover {
-      background-color: #eef3fb;
-    }
-
-    .hero-sidebox {
-      background-color: var(--tgms-light);
-      border-radius: 12px;
-      padding: 16px 18px;
-      font-size: 0.85rem;
-      color: var(--tgms-muted);
-      border: 1px solid #dde3ee;
-    }
-
-    /* Insights PDF button */
-    .insight-actions .btn-outline {
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      border-radius: 6px;
-      margin-top: 6px;
-    }
-
-    .insight-actions {
-      margin-top: 4px;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--tgms-blue);
-      margin-bottom: 8px;
-    }
-
-    /* CONTACT */
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
-      gap: 28px;
-      align-items: flex-start;
-      margin-top: 16px;
-    }
-
-    .contact-box {
-      background-color: var(--tgms-light);
-      border-radius: 12px;
-      padding: 16px 18px;
-      border: 1px solid #dde3ee;
-    }
-
-    form {
-      display: grid;
-      gap: 10px;
-      font-size: 0.9rem;
-    }
-
-    label {
-      font-weight: 500;
-      font-size: 0.85rem;
-      color: var(--tgms-muted);
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #c5d2e5;
-    }
-
-    .status-message {
-      margin-top: 8px;
-      font-size: 0.9rem;
-    }
-    .success-message { color: #1f7a3d; }
-    .error-message { color: #cc0033; }
-
-    footer {
-      border-top: 1px solid #dde3ee;
-      padding: 16px;
-      font-size: 0.8rem;
-      color: var(--tgms-muted);
-      text-align: center;
-      background-color: #fafbfe;
-      margin-top: 8px;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="nav-inner">
-    <div class="logo">TGMS — Tomura Global Mobility Strategy</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<!-- HERO省略：そのまま -->
-
-<!-- INSIGHTS 省略：そのまま -->
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2 class="section-title">Contact</h2>
-  <p class="section-subtitle">
-    For inquiries, collaboration, or project discussion, please reach out via email or the form below.
-  </p>
-
-  <div class="contact-wrapper">
-
-    <!-- Left box -->
-    <div class="contact-box">
-      <p class="contact-title">Direct email:</p>
-      <p class="contact-email">
-        <a href="mailto:naoki@tgmsstrategy.com">naoki@tgmsstrategy.com</a>
-      </p>
-      <p class="contact-description">
-        Typical engagements include market-entry / localization studies,
-        Indonesia insight packs, and executive briefing decks.
-      </p>
-    </div>
-
-    <!-- Right: form (non-redirect, in-page thanks) -->
-    <form id="contact-form" method="POST" action="https://formspree.io/f/xpwkqood">
-
-      <input type="text" name="_gotcha" style="display:none">
-
-      <label>Name*</label>
-      <input type="text" name="name" required>
-
-      <label>Company (optional)</label>
-      <input type="text" name="company">
-
-      <label>Email*</label>
-      <input type="email" name="email" required>
-
-      <label>Inquiry Type*</label>
-      <select name="inquiry" required>
-        <option value="">Please select</option>
-        <option value="market-entry">Market Entry & Localization</option>
-        <option value="indonesia-pack">Indonesia Insight Pack</option>
-        <option value="advisory">Advisory / Consulting</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label>Message*</label>
-      <textarea name="message" required></textarea>
-
-      <button type="submit" class="btn-primary">Send Message</button>
-
-      <p id="contact-status" class="status-message"></p>
-    </form>
-
-  </div>
-</section>
-
-</main>
-
-<footer>
-  © 2025 Tomura Global Mobility Strategy
-</footer>
-
-<!-- Contact submit handler -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("contact-status");
-
-  if (!form) return;
-
-  form.addEventListener("submit", async function (event) {
-    event.preventDefault();
-    status.textContent = "Sending...";
-    status.className = "status-message";
-
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { "Accept": "application/json" }
-      });
-
-      if (response.ok) {
-        form.reset();
-        status.textContent = "Thank you — your message has been sent.";
-        status.className = "status-message success-message";
-      } else {
-        status.textContent =
-          "Sorry, there was an issue sending your message. Please try again or email me directly.";
-        status.className = "status-message error-message";
-      }
-
-    } catch (error) {
-      status.textContent =
-        "Network error. Please try again later or email me directly.";
-      status.className = "status-message error-message";
-    }
-  });
-});
-</script>
-
-</body>
-</html>
