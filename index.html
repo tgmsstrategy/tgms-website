@@ -601,43 +601,45 @@
         </div>
 
         <!-- 右：フォーム -->
-        <form method="post" action="">
-          <!-- 後で Formspree 等のエンドポイントをここに設定 -->
-          <div>
-            <label for="name">Name<span class="required">*</span></label>
-            <input type="text" id="name" name="name" required />
-          </div>
+        <form
+  method="POST"
+  action="https://formspree.io/f/xpwkqood"
+>
+  <div>
+    <label for="name">Name<span class="required">*</span></label>
+    <input type="text" id="name" name="name" required />
+  </div>
 
-          <div>
-            <label for="company">Company (optional)</label>
-            <input type="text" id="company" name="company" />
-          </div>
+  <div>
+    <label for="company">Company (optional)</label>
+    <input type="text" id="company" name="company" />
+  </div>
 
-          <div>
-            <label for="email">Email<span class="required">*</span></label>
-            <input type="email" id="email" name="email" required />
-          </div>
+  <div>
+    <label for="email">Email<span class="required">*</span></label>
+    <input type="email" id="email" name="email" required />
+  </div>
 
-          <div>
-            <label for="type">Inquiry Type<span class="required">*</span></label>
-            <select id="type" name="type" required>
-              <option value="">Please select</option>
-              <option value="market-entry">Market Entry &amp; Localization</option>
-              <option value="indonesia-pack">Indonesia Insight Pack</option>
-              <option value="advisory">Advisory / Consulting</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+  <div>
+    <label for="type">Inquiry Type<span class="required">*</span></label>
+    <select id="type" name="type" required>
+      <option value="">Please select</option>
+      <option value="market-entry">Market Entry & Localization</option>
+      <option value="indonesia-pack">Indonesia Insight Pack</option>
+      <option value="advisory">Advisory / Consulting</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-          <div>
-            <label for="message">Message<span class="required">*</span></label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
+  <div>
+    <label for="message">Message<span class="required">*</span></label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
 
-          <div>
-            <button type="submit" class="btn-primary">Send Message</button>
-          </div>
-        </form>
+  <div>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </div>
+</form>
       </div>
     </section>
   </main>
@@ -647,6 +649,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
