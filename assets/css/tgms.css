@@ -1,4 +1,3 @@
- <style>
     :root {
       --tgms-blue: #003366;
       --tgms-light: #f5f7fa;
@@ -390,4 +389,13 @@
 .insight-actions {
   margin-top: 4px;
 }
-  </style>
+.insight-item a.insight-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 0;
+}
+
+.insight-item a.insight-link:hover {
+  opacity: 0.8;
+}
