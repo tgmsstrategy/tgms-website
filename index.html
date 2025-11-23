@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tomura Global Mobility Strategy (TGMS)</title>
   <meta name="description" content="Tomura Global Mobility Strategy (TGMS) – Automotive market entry & localization advisory specializing in ASEAN and Japan.">
-
   <style>
     :root {
       --tgms-blue: #003366;
@@ -33,6 +32,7 @@
       color: var(--tgms-accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
@@ -73,6 +73,7 @@
       color: #e7edf7;
       opacity: 0.9;
     }
+
     nav a:hover {
       opacity: 1;
     }
@@ -87,20 +88,11 @@
       scroll-margin-top: 90px;
     }
 
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: var(--tgms-blue);
-      margin-bottom: 8px;
+    .section:last-of-type {
+      margin-bottom: 16px;
     }
 
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--tgms-muted);
-      margin-bottom: 14px;
-    }
-
-    /* ---------- HERO ---------- */
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 3fr 2fr;
@@ -157,6 +149,7 @@
       background-color: var(--tgms-accent);
       color: white;
     }
+
     .btn-primary:hover {
       background-color: #0052a3;
     }
@@ -171,6 +164,7 @@
       color: var(--tgms-accent);
       border: 1px solid #c5d2e5;
     }
+
     .btn-outline:hover {
       background-color: #eef3fb;
     }
@@ -183,20 +177,37 @@
       color: var(--tgms-muted);
       border: 1px solid #dde3ee;
     }
+
     .hero-sidebox h3 {
       font-size: 1.25rem;
       margin-bottom: 8px;
       color: var(--tgms-blue);
       font-weight: 600;
     }
+
     .hero-sidebox ul {
       padding-left: 16px;
     }
+
     .hero-sidebox li {
       margin-bottom: 4px;
     }
 
-    /* ---------- ABOUT ---------- */
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--tgms-blue);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--tgms-muted);
+      margin-bottom: 14px;
+    }
+
+    /* ABOUT */
     .about-body {
       font-size: 0.95rem;
       margin-bottom: 12px;
@@ -209,7 +220,7 @@
       margin-bottom: 8px;
     }
 
-    /* ---------- SERVICES ---------- */
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -222,25 +233,29 @@
       padding: 14px 16px;
       background-color: white;
     }
+
     .service-card h3 {
       font-size: 1rem;
       margin-bottom: 6px;
       color: var(--tgms-blue);
     }
+
     .service-card p {
       font-size: 0.9rem;
       color: var(--tgms-muted);
     }
 
-    /* ---------- INSIGHTS ---------- */
+    /* INSIGHTS */
     .insights-list {
       list-style: none;
       font-size: 0.9rem;
     }
+
     .insights-list li {
       padding: 8px 0;
       border-bottom: 1px dashed #dde3ee;
     }
+
     .insights-label {
       display: inline-block;
       font-size: 0.75rem;
@@ -250,17 +265,7 @@
       margin-bottom: 4px;
     }
 
-    .insight-actions .btn-outline {
-      padding: 4px 10px;
-      font-size: 0.75rem;
-      border-radius: 6px;
-      margin-top: 6px;
-    }
-    .insight-actions {
-      margin-top: 4px;
-    }
-
-    /* ---------- CONTACT ---------- */
+    /* CONTACT */
     .contact-wrapper {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
@@ -275,27 +280,56 @@
       padding: 16px 18px;
       border: 1px solid #dde3ee;
     }
+
+    .contact-box p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--tgms-muted);
+    }
+
     .contact-title {
       margin-bottom: 6px;
       font-weight: 600;
     }
+
     .contact-email {
       font-weight: 600;
       color: var(--tgms-blue);
       font-size: 0.95rem;
     }
 
+    .contact-email a {
+      font-weight: 600;
+      color: var(--tgms-accent);
+      text-decoration: none;
+    }
+
+    .contact-email a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-description {
+      margin-top: 10px;
+      line-height: 1.6;
+      color: var(--tgms-muted);
+    }
+
     form {
       display: grid;
+      grid-template-columns: 1fr;
       gap: 10px;
       font-size: 0.9rem;
     }
+
     label {
       font-weight: 500;
       font-size: 0.85rem;
       color: var(--tgms-muted);
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 8px 10px;
       border-radius: 6px;
@@ -303,9 +337,23 @@
       font-size: 0.9rem;
       font-family: inherit;
     }
+
     textarea {
       min-height: 120px;
       resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--tgms-accent);
+      box-shadow: 0 0 0 1px rgba(0, 102, 204, 0.1);
+    }
+
+    .required {
+      color: #cc0033;
+      margin-left: 2px;
     }
 
     footer {
@@ -318,18 +366,7 @@
       margin-top: 8px;
     }
 
-    /* ---------- MOBILE ---------- */
     @media (max-width: 768px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-      }
-
       .hero {
         grid-template-columns: 1fr;
       }
@@ -338,140 +375,151 @@
         grid-template-columns: 1fr;
       }
 
-      .section {
-        scroll-margin-top: 70px;
+      header {
+        position: static;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
       }
     }
+.insight-actions .btn-outline {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+.insight-actions {
+  margin-top: 4px;
+}
   </style>
 </head>
-
 <body>
-<header>
-  <div class="nav-inner">
-    <div class="logo">TGMS — Tomura Global Mobility Strategy</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="nav-inner">
+      <div class="logo">TGMS &mdash; Tomura Global Mobility Strategy</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <!-- HERO -->
-  <section class="section hero" id="top">
-    <div>
-      <div class="hero-highlight">Automotive Strategy Advisory · ASEAN &amp; Japan</div>
-      <h1 class="hero-title">Tomura Global Mobility Strategy (TGMS)</h1>
-      <p class="hero-tagline">Bridging global vision with local reality.</p>
-      <p class="hero-subtitle">
-        Automotive market-entry &amp; localization advisory specializing in ASEAN and Japan,
-        built on deep OEM experience and granular data.
-      </p>
-      <div class="hero-cta">
-        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
-          Contact TGMS
-        </button>
-        <button class="btn-outline" onclick="document.getElementById('insights').scrollIntoView({behavior: 'smooth'});">
-          View Insights
-        </button>
+  <main>
+    <!-- HERO -->
+    <section class="section hero" id="top">
+      <div>
+        <div class="hero-highlight">Automotive Strategy Advisory &middot; ASEAN &amp; Japan</div>
+        <h1 class="hero-title">Tomura Global Mobility Strategy (TGMS)</h1>
+        <p class="hero-tagline">Bridging global vision with local reality.</p>
+        <p class="hero-subtitle">
+          Automotive market-entry &amp; localization advisory specializing in ASEAN and Japan, built on deep OEM experience and granular data.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
+            Contact TGMS
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('insights').scrollIntoView({behavior: 'smooth'});">
+            View Insights
+          </button>
+        </div>
       </div>
-    </div>
+      <aside class="hero-sidebox">
+        <h3>Focus Areas</h3>
+        <ul>
+          <li>ASEAN/Japan Market Entry Feasibility</li>
+          <li>Indonesia Multi-Year Database (Wholesale / Production / Export)</li>
+          <li>Price-Band &amp; Footprint Benchmarking (ICE / BEV / K-EV)</li>
+          <li>Cross-OEM Competitive Intelligence</li>
+        </ul>
+      </aside>
+    </section>
 
-    <aside class="hero-sidebox">
-      <h3>Focus Areas</h3>
-      <ul>
-        <li>ASEAN/Japan Market Entry Feasibility</li>
-        <li>Indonesia Multi-Year Database (Wholesale / Production / Export)</li>
-        <li>Price-Band &amp; Footprint Benchmarking (ICE / BEV / K-EV)</li>
-        <li>Cross-OEM Competitive Intelligence</li>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2 class="section-title">About TGMS</h2>
+      <p class="about-body">
+        TGMS is an independent automotive strategy advisory led by Naoki Tomura, with 35 years of experience across US, Japanese and Chinese OEMs.
+      </p>
+      <p class="about-body">
+        We focus on high-granularity, data-driven insights to support global OEMs and suppliers in:
+      </p>
+      <ul class="about-list">
+        <li>Market Entry &amp; Localization Strategy</li>
+        <li>ASEAN &amp; Japan Regulatory / Certification Navigation</li>
+        <li>Volume, Pricing, and Segmentation Analytics</li>
+        <li>Competitor &amp; Portfolio Tracking</li>
+        <li>Executive-level strategic briefing decks</li>
       </ul>
-    </aside>
-  </section>
+      <p class="about-body">
+        Based in Japan, operating globally.
+      </p>
+    </section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <h2 class="section-title">About TGMS</h2>
-    <p class="about-body">
-      TGMS is an independent automotive strategy advisory led by Naoki Tomura, with 35 years of experience across US, Japanese and Chinese OEMs.
-    </p>
-    <p class="about-body">
-      We focus on high-granularity, data-driven insights to support global OEMs and suppliers in:
-    </p>
-    <ul class="about-list">
-      <li>Market Entry &amp; Localization Strategy</li>
-      <li>ASEAN &amp; Japan Regulatory / Certification Navigation</li>
-      <li>Volume, Pricing, and Segmentation Analytics</li>
-      <li>Competitor &amp; Portfolio Tracking</li>
-      <li>Executive-level strategic briefing decks</li>
-    </ul>
-    <p class="about-body">
-      Based in Japan, operating globally.
-    </p>
-  </section>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">
+        Designed for OEM strategy teams, regional headquarters, and decision-makers seeking clarity on ASEAN &amp; Japan opportunities.
+      </p>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <h2 class="section-title">Services</h2>
-    <p class="section-subtitle">
-      Designed for OEM strategy teams, regional headquarters, and decision-makers seeking clarity on ASEAN &amp; Japan opportunities.
-    </p>
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Market Entry &amp; Localization</h3>
+          <p>
+            Feasibility assessment, cost/volume modeling, localization pathways, JV considerations, and regulatory/tariff risk simplification.
+          </p>
+        </article>
 
-    <div class="services-grid">
-      <article class="service-card">
-        <h3>Market Entry &amp; Localization</h3>
-        <p>
-          Feasibility assessment, cost/volume modeling, localization pathways, JV considerations,
-          and regulatory/tariff risk simplification.
-        </p>
-      </article>
+        <article class="service-card">
+          <h3>Indonesia Market Insight Pack</h3>
+          <p>
+            Monthly wholesale / production / export digest built on a proprietary TGMS multi-year GAIKINDO-aligned database.
+          </p>
+        </article>
 
-      <article class="service-card">
-        <h3>Indonesia Market Insight Pack</h3>
-        <p>
-          Monthly wholesale / production / export digest built on a proprietary TGMS multi-year
-          GAIKINDO-aligned database.
-        </p>
-      </article>
+        <article class="service-card">
+          <h3>Portfolio &amp; Pricing Structure</h3>
+          <p>
+            Price-band benchmarking, vehicle footprint mapping, and BEV / K-EV specific comparative analysis across key markets.
+          </p>
+        </article>
 
-      <article class="service-card">
-        <h3>Portfolio &amp; Pricing Structure</h3>
-        <p>
-          Price-band benchmarking, vehicle footprint mapping, and BEV / K-EV specific comparative
-          analysis across key markets.
-        </p>
-      </article>
+        <article class="service-card">
+          <h3>Regulation &amp; Certification Advisory</h3>
+          <p>
+            Type-approval, homologation, and non-tariff barrier interpretation for Japan and ASEAN markets, especially for new OEM entrants.
+          </p>
+        </article>
 
-      <article class="service-card">
-        <h3>Regulation &amp; Certification Advisory</h3>
-        <p>
-          Type-approval, homologation, and non-tariff barrier interpretation for Japan and ASEAN markets,
-          especially for new OEM entrants.
-        </p>
-      </article>
+        <article class="service-card">
+          <h3>Ad-hoc Strategic Analysis</h3>
+          <p>
+            Tailored decks and rapid-turnaround analysis for executives and HQ strategy teams responding to time-sensitive questions.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <article class="service-card">
-        <h3>Ad-hoc Strategic Analysis</h3>
-        <p>
-          Tailored decks and rapid-turnaround analysis for executives and HQ strategy teams
-          responding to time-sensitive questions.
-        </p>
-      </article>
-    </div>
-  </section>
+    <!-- INSIGHTS -->
+    <section class="section" id="insights">
+      <h2 class="section-title">Monthly Insights (Selected)</h2>
+      <p class="section-subtitle">
+        TGMS produces concise, executive-ready insight decks based on proprietary datasets and on-the-ground observations.
+      </p>
 
-  <!-- INSIGHTS -->
-  <section class="section" id="insights">
-    <h2 class="section-title">Monthly Insights (Selected)</h2>
-    <p class="section-subtitle">
-      TGMS produces concise, executive-ready insight decks based on proprietary datasets and on-the-ground observations.
-    </p>
+      <ul class="insights-list">
 
-    <ul class="insights-list">
-      <li>
+<li>
         <div class="insights-label">Indonesia</div>
         <strong>Indonesia Landscape View</strong><br />
         <span>
@@ -501,83 +549,108 @@
           </a>
         </div>
       </li>
+        <li>
+          <div class="insights-label">ASEAN &amp; China OEMs</div>
+          <strong>Chinese OEM ASEAN Expansion Brief</strong><br />
+          <span>Perspective on BYD, GWM, Changan and others in ASEAN, including product, localization moves, and competitive dynamics.</span>
+        </li>
+        <li>
+          <div class="insights-label">Autoshow</div>
+          <strong>Autoshow Comparison: JMS vs. BIMS vs. GIIAS</strong><br />
+          <span>Comparative view of show content, visitor mix, and OEM signaling across key regional auto shows.</span>
+        </li>
+      </ul>
+    </section>
 
-      <li>
-        <div class="insights-label">ASEAN &amp; China OEMs</div>
-        <strong>Chinese OEM ASEAN Expansion Brief</strong><br />
-        <span>
-          Perspective on BYD, GWM, Changan and others in ASEAN,
-          including product, localization moves, and competitive dynamics.
-        </span>
-      </li>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">
+        For inquiries, collaboration, or project discussion, please reach out via email or the form below.
+      </p>
 
-      <li>
-        <div class="insights-label">Autoshow</div>
-        <strong>Autoshow Comparison: JMS vs. BIMS vs. GIIAS</strong><br />
-        <span>
-          Comparative view of show content, visitor mix, and OEM signaling across key regional auto shows.
-        </span>
-      </li>
-    </ul>
-  </section>
+      <div class="contact-wrapper">
+        <!-- 左：Direct email -->
+        <div class="contact-box">
+          <p class="contact-title">Direct email:</p>
+          <p class="contact-email">
+            <a href="mailto:contact@tgmsstrategy.com">contact@tgmsstrategy.com</a>
+          </p>
+          <p class="contact-description">
+            Typical engagements include market-entry / localization studies,
+            Indonesia insight packs, and executive briefing decks.
+          </p>
+        </div>
 
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <h2 class="section-title">Contact</h2>
-    <p class="section-subtitle">
-      For inquiries, collaboration, or project discussion, please reach out via email or the form below.
-    </p>
+        <!-- 右：フォーム -->
+    <form id="contact-form" onsubmit="submitContact(event)">
+  <!-- anti-spam -->
+  <input type="text" name="_gotcha" style="display:none">
 
-    <div class="contact-wrapper">
-      <!-- Left: Direct email -->
-      <div class="contact-box">
-        <p class="contact-title">Direct email:</p>
-        <p class="contact-email">
-          <a href="mailto:contact@tgmsstrategy.com">contact@tgmsstrategy.com</a>
-        </p>
-        <p class="contact-description">
-          Typical engagements include market-entry / localization studies,
-          Indonesia insight packs, and executive briefing decks.
-        </p>
+  <label>Name*</label>
+  <input type="text" name="name" required>
+
+  <label>Company (optional)</label>
+  <input type="text" name="company">
+
+  <label>Email*</label>
+  <input type="email" name="email" required>
+
+  <label>Inquiry Type*</label>
+  <select name="inquiry" required>
+    <option value="">Please select</option>
+    <option value="market-entry">Market Entry &amp; Localization</option>
+    <option value="indonesia-pack">Indonesia Insight Pack</option>
+    <option value="advisory">Advisory / Consulting</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label>Message*</label>
+  <textarea name="message" required></textarea>
+
+  <button type="submit" class="btn-primary">Send Message</button>
+</form>
+
+<p id="form-status"></p>
+
+
+
       </div>
+    </section>
+  </main>
 
-      <!-- Right: Form (simple redirect) -->
-      <form method="POST" action="https://formspree.io/f/xpwkqood">
-        <!-- redirect to custom success page -->
-        <input type="hidden" name="_redirect" value="https://tgmsstrategy.com/success.html">
-        <!-- anti-spam -->
-        <input type="text" name="_gotcha" style="display:none">
+  <footer>
+    © 2025 Tomura Global Mobility Strategy
+  </footer>
 
-        <label>Name*</label>
-        <input type="text" name="name" required>
+<script>
+  async function submitContact(event) {
+    event.preventDefault(); // ← 絶対にデフォルト送信させない
 
-        <label>Company (optional)</label>
-        <input type="text" name="company">
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    const data = new FormData(form);
 
-        <label>Email*</label>
-        <input type="email" name="email" required>
+    try {
+      const res = await fetch('https://formspree.io/f/xpwkqood', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-        <label>Inquiry Type*</label>
-        <select name="inquiry" required>
-          <option value="">Please select</option>
-          <option value="market-entry">Market Entry &amp; Localization</option>
-          <option value="indonesia-pack">Indonesia Insight Pack</option>
-          <option value="advisory">Advisory / Consulting</option>
-          <option value="other">Other</option>
-        </select>
+      if (res.ok) {
+        status.textContent = 'Thank you. Your message has been sent.';
+        form.reset();
+      } else {
+        status.textContent = 'Sorry, something went wrong. Please try again.';
+      }
+    } catch (error) {
+      status.textContent = 'Network error. Please try again later.';
+    }
+  }
+</script>
 
-        <label>Message*</label>
-        <textarea name="message" required></textarea>
 
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer>
-  © 2025 Tomura Global Mobility Strategy
-</footer>
 </body>
 </html>
 
