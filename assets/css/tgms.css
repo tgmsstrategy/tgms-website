@@ -389,30 +389,9 @@
 .insight-actions {
   margin-top: 4px;
 }
-.insight-item a.insight-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  padding: 6px 0;
-}
-
-.insight-item a.insight-link:hover {
-  opacity: 0.8;
-}
-.insight-item a.insight-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  padding: 8px 4px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-
-.insight-item a.insight-link:hover {
-  background-color: #f0f4fa;
-}
-
 .insight-item a.insight-link strong {
   color: var(--tgms-accent);
+  text-decoration: underline;
 }
+
 
