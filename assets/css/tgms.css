@@ -393,10 +393,8 @@
   color: var(--tgms-accent);
   text-decoration: underline;
 }
-.insight-item a.insight-link span {
-  color: var(--tgms-text);
-  text-decoration: none;
-}
+
+
 
 
 
