@@ -405,13 +405,30 @@ body {
   margin-bottom: 24px;
 }
 
+/* タイトル共通スタイル（リンクでも非リンクでも共通） */
 .insight-title {
   font-size: 1rem;
   font-weight: 700;
-  color: var(--tgms-blue);
-  text-decoration: none;
   letter-spacing: 0.04em;
 }
+
+/* リンクのタイトルだけ：色＋ホバー下線＋指カーソル */
+a.insight-title {
+  color: var(--tgms-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.insight-title:hover {
+  text-decoration: underline;
+}
+
+/* 非リンクのタイトル（xEVなど）：色だけ揃えてカーソルは通常 */
+span.insight-title {
+  color: var(--tgms-blue);
+  cursor: default;
+}
+
 
 .insight-title:hover {
   text-decoration: underline;
@@ -433,9 +450,12 @@ body {
   text-decoration: none;
   font-weight: 600;
 }
-.insight-sub a:hover {
-  text-decoration: underline;
+span.insight-title {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none !important;
 }
+
 
 
 
