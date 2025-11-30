@@ -455,3 +455,15 @@ span.insight-title {
   cursor: default;
   text-decoration: none !important;
 }
+/* PCでは改行しない */
+.cn-title {
+    white-space: nowrap;
+}
+
+/* スマホでは改行を許可（余白発生を防ぐ） */
+@media (max-width: 600px) {
+    .cn-title {
+        white-space: normal;
+        word-break: break-word;
+    }
+}
