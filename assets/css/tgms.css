@@ -455,37 +455,3 @@ span.insight-title {
   cursor: default;
   text-decoration: none !important;
 }
-/* xEV page overrides (existing CSS is still used) */
-.xev .section-title {
-    font-size: 1.1rem;   /* 既存CSSより少しだけ小さく */
-}
-
-.xev .about-list {
-    border-bottom: none;  /* ここだけ消す */
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.xev .section {
-    border-bottom: none;  /* 点線がsection側の場合 */
-}
-.section.xev .section-title--small {
-    font-size: 1.1rem;
-}
-
-.section.xev .about-list--plain {
-    border-bottom: none;
-}
-.section-title--small {
-    font-size: 1.1rem;
-}
-
-.about-list--plain {
-    border-bottom: none;
-}
-
-
-
-
-
-
