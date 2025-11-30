@@ -467,3 +467,24 @@ span.insight-title {
         word-break: break-word;
     }
 }
+.insight-contact-cta {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.insight-contact-text {
+  font-size: 0.95rem;
+  color: var(--tgms-muted);
+  line-height: 1.6;
+}
+
+.insight-contact-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--tgms-accent);
+}
+
+.insight-contact-link:hover {
+  text-decoration: underline;
+}
