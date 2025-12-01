@@ -488,3 +488,31 @@ span.insight-title {
 .insight-contact-link:hover {
   text-decoration: underline;
 }
+.monthly-teaser-thumb {
+  max-width: 420px;   /* 必要なら 360〜480 の間で調整 */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px 0 12px 0;
+}
+.teaser-download {
+  margin: 8px 0 4px;
+}
+
+.teaser-download .btn-primary {
+  display: inline-block; /* これでボタンの下にテキストが来る */
+}
+.btn-mini {
+  display: inline-block;
+  background-color: var(--tgms-accent);
+  color: white;
+  padding: 6px 12px;      /* ← 小さめ */
+  font-size: 0.85rem;     /* ← 一回り小さい */
+  border-radius: 6px;     /* ← 標準より小さく */
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-mini:hover {
+  background-color: #004c99;
+}
