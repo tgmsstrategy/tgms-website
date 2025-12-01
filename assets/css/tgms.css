@@ -516,3 +516,7 @@ span.insight-title {
 .btn-mini:hover {
   background-color: #004c99;
 }
+.insight-title {
+    display: inline-block;
+    margin-top: 24px;
+}
