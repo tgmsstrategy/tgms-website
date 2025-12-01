@@ -34,7 +34,7 @@ body {
     header {
       background: linear-gradient(135deg, var(--tgms-blue), #001a33);
       color: white;
-      padding: 16px 24px;
+      padding: 16px 16px;
       position: sticky;
       top: 0;
       z-index: 10;
@@ -512,8 +512,15 @@ span.insight-title {
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
-
-.btn-mini:hover {
-  background-color: #004c99;
+/* 中国語ページだけ HERO を 1カラム（全幅）にする */
+.cjk-text .hero {
+  display: block;               /* グリッドをやめて単列レイアウトに戻す */
+  /* もしくは grid を残したいなら ↓ でもOK
+  display: grid;
+  grid-template-columns: 1fr;   /* 1カラム */
+  */
 }
+
+
+
 
