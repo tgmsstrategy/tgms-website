@@ -126,6 +126,30 @@
     </p>
 
   </div>
+
+  <div class="contact-box contact-box-zh">
+  <p class="contact-title">订阅 TGMS 邮件列表</p>
+  <p class="contact-description">
+    不定期发送 TGMS 的最新分析和报告预告，不会群发垃圾邮件。
+  </p>
+
+  <form id="newsletter-form" onsubmit="submitNewsletter(event)">
+    <input type="hidden" name="form_type" value="mailing_list">
+
+    <label>姓名</label>
+    <input type="text" name="name" required>
+
+    <label>电子邮箱</label>
+    <input type="email" name="email" required>
+
+    <button type="submit" class="btn-primary" style="margin-top:8px; width:100%;">
+      订阅邮件列表
+    </button>
+  </form>
+
+  <p id="newsletter-status"></p>
+</div>
+
 </section>
 
 

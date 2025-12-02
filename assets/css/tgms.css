@@ -538,4 +538,19 @@ span.insight-title {
   color: var(--tgms-blue);
   margin-bottom: 4px;
 }
+.contact-box-zh {
+  max-width: 480px;
+  width: 100%;
+  margin: 0;
+}
 
+/* 余白を少しだけ縮める */
+.contact-box {
+  padding: 16px 20px;  /* たぶん今は 24px くらいになっている */
+}
+
+/* フォームの縦幅を少し細くする */
+.contact-box input,
+.contact-box button {
+  padding: 8px 10px;   /* ここも 10〜12px → 8px 程度に */
+}
