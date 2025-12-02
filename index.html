@@ -187,93 +187,138 @@
 
 
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">
-        For inquiries, collaboration, or project discussion, please reach out via email or the form below.
+     <!-- CONTACT -->
+  <section class="section" id="contact">
+  <h2 class="section-title">Contact</h2>
+
+  <!-- ① サブタイトルに contact@tgmsstrategy.com を入れる -->
+  <p class="section-subtitle">
+    For inquiries, collaboration, or project discussion, please reach out via email
+    <a href="mailto:contact@tgmsstrategy.com">contact@tgmsstrategy.com</a>
+    or the contact form below.
+  </p>
+
+  <div class="contact-wrapper">
+    <!-- ④ 左右入れ替え：左側 = Contact Form -->
+    <div class="contact-form-column contact-box">
+
+      <!-- ③ Contact Form タイトル -->
+      <p class="contact-title">Contact Form:</p>
+
+      <form id="contact-form" onsubmit="submitContact(event)">
+        <!-- anti-spam -->
+        <input type="text" name="_gotcha" style="display:none">
+
+        <label>Name*</label>
+        <input type="text" name="name" required>
+
+        <label>Company (optional)</label>
+        <input type="text" name="company">
+
+        <label>Email*</label>
+        <input type="email" name="email" required>
+
+        <label>Inquiry Type*</label>
+        <select name="inquiry" required>
+          <option value="">Please select</option>
+          <option value="market-entry">Market Entry &amp; Localization</option>
+          <option value="indonesia-pack">Indonesia Insight Pack</option>
+          <option value="advisory">Advisory / Consulting</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Message*</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+
+      <p id="form-status"></p>
+    </div>
+
+    <!-- ② Direct email ボックスは削除済み。右側はメーリングリストだけ -->
+    <div class="contact-box">
+      <p class="contact-title">Subscribe to the TGMS Mailing List:</p>
+      <p class="contact-description">
+        Receive occasional updates on TGMS insights and reports. No spam.
       </p>
 
-      <div class="contact-wrapper">
-        <!-- 左：Direct email -->
-        <div class="contact-box">
-          <p class="contact-title">Direct email:</p>
-          <p class="contact-email">
-            <a href="mailto:contact@tgmsstrategy.com">contact@tgmsstrategy.com</a>
-          </p>
-          <p class="contact-description">
-            Typical engagements include market-entry / localization studies,
-            Indonesia insight packs, and executive briefing decks.
-          </p>
-        </div>
+      <form id="newsletter-form" onsubmit="submitNewsletter(event)">
+        <input type="hidden" name="form_type" value="mailing_list">
 
-        <!-- 右：フォーム -->
-    <form id="contact-form" onsubmit="submitContact(event)">
-  <!-- anti-spam -->
-  <input type="text" name="_gotcha" style="display:none">
+        <label>Name</label>
+        <input type="text" name="name" required>
 
-  <label>Name*</label>
-  <input type="text" name="name" required>
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-  <label>Company (optional)</label>
-  <input type="text" name="company">
+        <button type="submit" class="btn-primary" style="margin-top:8px; width:100%;">
+          Join Mailing List
+        </button>
+      </form>
 
-  <label>Email*</label>
-  <input type="email" name="email" required>
+      <p id="newsletter-status" style="font-size:0.85rem; margin-top:4px;"></p>
+    </div>
+  </div>
+</section>
 
-  <label>Inquiry Type*</label>
-  <select name="inquiry" required>
-    <option value="">Please select</option>
-    <option value="market-entry">Market Entry &amp; Localization</option>
-    <option value="indonesia-pack">Indonesia Insight Pack</option>
-    <option value="advisory">Advisory / Consulting</option>
-    <option value="other">Other</option>
-  </select>
-
-  <label>Message*</label>
-  <textarea name="message" required></textarea>
-
-  <button type="submit" class="btn-primary">Send Message</button>
-</form>
-
-<p id="form-status"></p>
-
-
-
-      </div>
-    </section>
   </main>
 
   <footer>
     © 2025 Tomura Global Mobility Strategy
   </footer>
 
-<script>
-  async function submitContact(event) {
-    event.preventDefault(); // ← 絶対にデフォルト送信させない
+  <script>
+    async function submitContact(event) {
+      event.preventDefault();
 
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-    const data = new FormData(form);
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+      const data = new FormData(form);
 
-    try {
-      const res = await fetch('https://formspree.io/f/xpwkqood', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        const res = await fetch('https://formspree.io/f/xpwkqood', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      if (res.ok) {
-        status.textContent = 'Thank you. Your message has been sent.';
-        form.reset();
-      } else {
-        status.textContent = 'Sorry, something went wrong. Please try again.';
+        if (res.ok) {
+          status.textContent = 'Thank you. Your message has been sent.';
+          form.reset();
+        } else {
+          status.textContent = 'Sorry, something went wrong. Please try again.';
+        }
+      } catch (error) {
+        status.textContent = 'Network error. Please try again later.';
       }
-    } catch (error) {
-      status.textContent = 'Network error. Please try again later.';
     }
-  }
-</script>
+
+    async function submitNewsletter(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('newsletter-form');
+      const status = document.getElementById('newsletter-status');
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch('https://formspree.io/f/xpwkqood', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          status.textContent = 'Thank you. You have been added to the mailing list.';
+          form.reset();
+        } else {
+          status.textContent = 'Sorry, something went wrong. Please try again.';
+        }
+      } catch (error) {
+        status.textContent = 'Network error. Please try again later.';
+      }
+    }
+  </script>
 
 
 </body>

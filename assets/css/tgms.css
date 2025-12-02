@@ -14,12 +14,20 @@
     }
 
 body {
-  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", 
-    "Segoe UI", system-ui, sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    "Noto Sans JP",
+    sans-serif;
   color: var(--tgms-text);
   background-color: #ffffff;
   line-height: 1.65;
 }
+
 
 
     a {
@@ -261,12 +269,14 @@ body {
 
     /* CONTACT */
     .contact-wrapper {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
-      gap: 28px;
-      align-items: flex-start;
-      margin-top: 16px;
-    }
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+
 
     .contact-box {
       background-color: var(--tgms-light);
@@ -514,13 +524,18 @@ span.insight-title {
 }
 /* 中国語ページだけ HERO を 1カラム（全幅）にする */
 .cjk-text .hero {
-  display: block;               /* グリッドをやめて単列レイアウトに戻す */
-  /* もしくは grid を残したいなら ↓ でもOK
+  display: block;  /* グリッドやめて 1 カラム表示 */
+}
+.contact-form-block {
   display: grid;
-  grid-template-columns: 1fr;   /* 1カラム */
-  */
+  grid-template-rows: auto auto;
+  gap: 8px;
 }
 
-
-
+.contact-form-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--tgms-blue);
+  margin-bottom: 4px;
+}
 
