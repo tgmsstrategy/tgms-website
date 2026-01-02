@@ -556,3 +556,15 @@ span.insight-title {
 .contact-box button {
   padding: 8px 10px;   /* ここも 10〜12px → 8px 程度に */
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;          /* ロゴと文字の間隔 */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.logo img {
+  height: 28px;       /* ヘッダー高さに合わせる */
+  width: auto;
+}
